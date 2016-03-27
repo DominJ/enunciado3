@@ -1,7 +1,7 @@
 import java.io.*;
 import java.lang.String;
 
-public class menu
+public class Menu
 { 
 	public static void main(String args[] )throws IOException{ 
 	BufferedReader in =new BufferedReader(new InputStreamReader(System.in)); 
