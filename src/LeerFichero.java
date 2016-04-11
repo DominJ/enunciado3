@@ -75,15 +75,27 @@ public class LeerFichero {
 		    if (trobat != 1) System.out.printf("No existeix a l'arxiu");
 		    b.close();
 	}*/
+	public static void printArray(ArrayList<Integer> a) throws  IOException {
+		Integer list2[] = new Integer[a.size()];
+		   list2 = a.toArray(list2);
+
+		   System.out.println("Printing elements of a");
+
+		   // let us print all the elements available in list
+		   for (Integer number : list2) {
+		   System.out.println("Number = " + number);
+		   }
+	}
+	
 	
 	public static void main(String [] args) throws IOException {
-		//muestraContenido("");
 		HashMap<Integer,ArrayList<Integer>> r = crear_relacion("/home2/users/alumnes/1193773/dades/DBLP_four_area/paper_term.txt");
-		//r.values();
-		//ArrayList<Integer> l = new ArrayList<Integer>();
-		for(int i = 0; i < r.size(); i++) {   
-		    System.out.print(r.get(i));
-		} 
+		ArrayList<Integer> m = r.get(7601);
+		printArray(m);
+		//for (Integer number : m) {
+			//   System.out.println("Number = " + number);
+		//}
+		   
 	}
 
 }
