@@ -1,3 +1,5 @@
+package clasesCompartidas;
+
 import java.io.BufferedReader;
 
 import java.io.FileReader;
@@ -45,12 +47,12 @@ public class LeerFichero {
 	    		//System.out.println("codi_antic: \n"+ codi_antic);
 	    	}
 	    	if(!(s.equals(s2))){
-	    		System.out.println("\niteracio: "+ iter);
-	    		System.out.println(" codi: "+ codi + " codi_antic: "+ codi_antic);
+	    		//System.out.println("\niteracio: "+ iter);
+	    		//System.out.println(" codi: "+ codi + " codi_antic: "+ codi_antic);
 	    		m.put(codi_antic, l);
-	    		l.clear();
-	    		++iter;
-	    		 //System.out.println("Fi");
+	    		l = new ArrayList<Integer>();
+	    		//++iter;
+	    		 
 	    	}
 	    	l.add(codi2);
 	    	codi_antic = codi;
@@ -68,23 +70,12 @@ public class LeerFichero {
 	}
 	
 	
-	public static void printArray(ArrayList<Integer> a) throws  IOException {
-		Integer list2[] = new Integer[a.size()];
-		   list2 = a.toArray(list2);
-
-		   System.out.println("Printing elements of a");
-
-		   // let us print all the elements available in list
-		   for (Integer number : list2) {
-		   System.out.println("Number = " + number);
-		   }
-	}
 	
 	
 	public static void main(String [] args) throws IOException {
 		HashMap<Integer,ArrayList<Integer>> r = crear_relacion("/home2/users/alumnes/1193773/dades/DBLP_four_area/paper_term.txt");
 		ArrayList<Integer> m = new ArrayList<Integer>();
-		m = r.get(7601);
+		m = r.get(7604);
 		/* System.out.println(r.get(7601).getClass());		
 		 System.out.println(r.get(7601).size());
 		 System.out.println(m.getClass());		
